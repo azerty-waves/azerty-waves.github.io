@@ -1,0 +1,74 @@
+title : azerty-waves
+name: 'azerty-waves'
+description: 'Personal blog about my productions and projects.'
+
+markdown: kramdown
+highlighter: rouge
+javascript_enabled: true
+
+#url: http://127.0.0.1:4000
+url: 'https://azerty-waves.github.io'
+
+
+featured_posts_title: Unrelated
+featured_posts:
+  - url: '#'
+    title: 'Featured post #1'
+  - url: '#'
+    title: 'Featured post #2'
+  - url: '#'
+    title: 'Featured post #3'
+
+collections:
+  compositions:
+    title: Compositions
+    default_open: false
+    output: true
+  synthesizer:
+    title: Synthesizer
+    default_open: false
+    output: true
+  workflow:
+    title: Workflow
+    default_open: false
+    output: true
+  hide:
+    title: hide
+    default_open: false
+    output: true
+
+defaults:
+  - scope:
+      type: compositions
+    values:
+      title: Compositions
+      permalink: /compositions/:title
+
+  - scope:
+      type: synthesizer
+    values:
+      title: Synthesizer
+      permalink: /synthesizer/:title
+
+  - scope:
+      type: workflow
+    values:
+      title: Workflow
+      permalink: /workflow/:title
+
+  - scope:
+      type: hide
+    values:
+      title: hide
+      permalink: /hide/:title
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+exclude:
+  - .jekyll-cache/
+  - '*.log'
+
+plugins:
+  - jekyll-sitemap
